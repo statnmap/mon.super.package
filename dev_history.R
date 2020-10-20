@@ -6,6 +6,7 @@ usethis::use_git_ignore("data-raw/")
 # Licence
 usethis::use_mit_license("ThinkR")
 
+
 # git - versionnement
 usethis::use_git()
 
