@@ -33,12 +33,6 @@ mon_iris
 - je cherhce la relation entre Speal.width et petal.width
 
 ```{r}
-creer_graph <- function(x) {
-  ggplot(x) +
-    aes(x = Sepal.Width, y = Petal.Width) +
-    geom_point()
-}
-
 creer_graph(mon_iris)
 ```
 

@@ -1,0 +1,52 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# mon.super.package
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of mon.super.package is to ...
+
+## Installation
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("statnmap/mon.super.package")
+```
+
+## Reproducible example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(mon.super.package)
+## basic example code
+# mon.super.package::run_app()
+```
+
+What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+
+```{r cars}
+mon_fichier <- system.file("example-data/iris_filtered.rds", package = "mon.super.package")
+mon_iris <- readr::read_rds(mon_fichier)
+mon_iris
+
+creer_graph(mon_iris)
+```
+
+You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
