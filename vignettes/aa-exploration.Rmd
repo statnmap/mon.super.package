@@ -1,0 +1,47 @@
+---
+title: "aa-exploration"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{aa-exploration}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Packages
+```{r setup}
+library(mon.super.package)
+library(readr)
+library(ggplot2)
+```
+
+## Lecture des données interne
+```{r}
+mon_fichier <- system.file("example-data/iris_filtered.rds", package = "mon.super.package")
+mon_iris <- read_rds(mon_fichier)
+mon_iris
+```
+
+## Mes analyses
+
+- je cherhce la relation entre Speal.width et petal.width
+
+```{r}
+creer_graph <- function(x) {
+  ggplot(x) +
+    aes(x = Sepal.Width, y = Petal.Width) +
+    geom_point()
+}
+
+creer_graph(mon_iris)
+```
+
+
+
+
